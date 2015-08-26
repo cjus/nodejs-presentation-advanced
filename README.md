@@ -1,4 +1,4 @@
-# NodeJS Presentation
+# NodeJS Advanced Presentation
 
 ## Tips for running this presentation
 
@@ -10,7 +10,7 @@ If you're not familiar with RevealJS the following tips might prove helpful. Try
 
 ## View the presentation
 
-[http://cjus.github.io/nodejs-presentation](http://cjus.github.io/nodejs-presentation)
+[http://cjus.github.io/nodejs-presentation](http://cjus.github.io/nodejs-presentation-advanced)
 
 ## Print the presentation
 
