@@ -38,6 +38,8 @@
 
 <!-- To print: http://localhost:8000/?print-pdf/#/ -->
 
+<section data-markdown="markdown/test.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <!-- Title slide  ----------------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
@@ -81,9 +83,143 @@
   <h2>Node = NodeJS</h2>
   <aside class="notes" data-markdown="">
     ---
+    In this presentation I'll refer to NodeJS simply as Node.
   </aside>
 </section>
 
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- This is part two ------------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="slow">
+  <h2>This is part two</h2>
+  <ul>
+    <li>Part one is here: http://cjus.github.io/nodejs-presentation</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+    ---
+    In our last presentation we looked at NodeJS as a JavaScript execution engine and platform for building everything
+    from command line tools and desktop applications - to full-blown web applications.
+
+    In addition we looked at installing Node and adding packages such as the Express web application framework.
+
+    If you missed that talk you can find it here… http://cjus.github.io/nodejs-presentation
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Quick recap ------------------------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Quick recap</h3>
+  <ul>
+    <li>Node is an application which contains a JavaScript execution engine</li>
+    <li>Specifically, that engine is Google's Chrome V8 engine</li>
+    <li>However, Node is also much more</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+    ---
+    Let’s do a quick recap before diving into more advanced node topics.
+
+    So we discussed Node as a JavaScript execution engine because node is an application - which contains an embedded
+    JavaScript interpreter for running JavaScript programs.
+
+    Node is actually much more, but this simple definition serves as a foundation for learning about Node.
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Quick recap - Node as a JS execution engine ---------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Node as a JS execution engine</h3>
+  <ul>
+    <li>Start node at the terminal</li>
+    <li>Node then enters a mode called a REPL (Read Eval Print Loop)</li>
+    <li>Type JS and watch it execute</li>
+    <li>Tip: Press the TAB key to view a list of internal commands</li>
+    <li>Press CTRL-C twice to exit</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+    ---
+    Let’s see how Node works as a JavaScript execution engine.
+
+    Here’s a quick demo. Let's start Node at the terminal prompt. We won't go into installing node, that's covered in
+    our last presentation.
+
+    $ node
+
+    That starts the Node and enters an interactive mode known as a REPL which is an acronym for Read Eval(uate) Print
+    Loop.
+
+    We can enter JavaScript in this console and see the results.
+
+    Tip: Press the TAB key to view a list of internal commands
+
+    To exit simply press CTRL-C twice.
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Quick recap - Node as a tool to build command line programs ------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Node as a tool to build command line programs</h3>
+  <ul>
+    <li>Code sample here: https://github.com/cjus/nodejs-presentation-advanced/tree/master/NodeJSProjects/commandline</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+    ---
+    Node can also be used to build programs that execute on the command line.
+    Here’s our example of a command line program which displays system information.
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Quick recap - Node as a web server ------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Node as a web server</h3>
+  <ul>
+    <li>Code sample here: https://github.com/cjus/nodejs-presentation-advanced/tree/master/NodeJSProjects/web/login</li>
+  </ul>
+  <aside class="notes" data-markdown="">
+    ---
+    We also saw how Node can be used to serve web pages and even act as an API server as part of a larger web
+    applications.
+
+    Here’s that demo.
+
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Quick recap - Node as an API server ------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Node as an API server</h3>
+  <img style="border: 0; padding: 20px; width: 60%" src="images/login-using-paw.png">
+  <aside class="notes" data-markdown="">
+    ---
+    In the last demo Node is acting as both a web server and an API server. To demonstrate this, let's login using a
+    desktop client called PAW. PAW is a mac only tool this is popular among API developers.
+
+
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Quick recap ------------------------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Quick recap</h3>
+  <img style="border: 0; padding: 20px;" src="images/framework_table_03.png">
+  <aside class="notes" data-markdown="">
+    ---
+  </aside>
+</section>
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <!-- Contact ---------------------------------------------------------------------------------------------------------->
