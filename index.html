@@ -44,9 +44,9 @@
 <!-- Title slide  ----------------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="cube" data-transition-speed="medium">
-  <img style="border: 0; padding: 0; width: 24%;" src="images/nodejs-sticker-advanced.png">
+  <img style="border: 0; padding: 0; width: 25%;" src="images/nodejs-sticker-advanced.png">
 
-  <h2>An Advanced Introduction to NodeJS</h2>
+  <h2>An Advanced Introduction<br>to NodeJS</h2>
   <p>
     <small>Presented by <a href="http://cjus.me" target="_blank">Carlos Justiniano</a> /
       <a href="http://www.meetup.com/Hudson-County-JavaScript-Meetup/" target="_blank">HC.JS</a> /
@@ -63,7 +63,6 @@
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="medium">
   <h3>About me</h3>
-
   <ul>
     <li>Carlos Justiniano, HC.JS founder and a long-time programmer</li>
     <li>A fullstack developer using NodeJS since 2011</li>
@@ -91,7 +90,7 @@
 <!-- This is part two ------------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="slow">
-  <h2>This is part two</h2>
+  <h3>This is part two</h3>
   <ul>
     <li>Part one is here: http://cjus.github.io/nodejs-presentation</li>
   </ul>
@@ -199,27 +198,172 @@
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="medium">
   <h3>Node as an API server</h3>
-  <img style="border: 0; padding: 20px; width: 60%" src="images/login-using-paw.png">
+  <img style="border: 0; padding: 5px;" src="images/login-using-paw.png">
   <aside class="notes" data-markdown="">
     ---
-    In the last demo Node is acting as both a web server and an API server. To demonstrate this, let's login using a
-    desktop client called PAW. PAW is a mac only tool this is popular among API developers.
+    In the last demo Node is functioning as both a web server and an API server. To demonstrate this, let's login using a desktop client called PAW. PAW is a mac only tool for testing APIs that is popular among API developers.
 
+    Using PAW we can see how our API request is constructed and what Node returns in response.
 
+    We can also see this on the command line as the calls happen.
   </aside>
 </section>
 
-
 <!-- ------------------------------------------------------------------------------------------------------------------>
-<!-- Quick recap ------------------------------------------------------------------------------------------------------>
+<!-- Node web frameworks ---------------------------------------------------------------------------------------------->
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <section data-transition="fade" data-transition-speed="medium">
-  <h3>Quick recap</h3>
-  <img style="border: 0; padding: 20px;" src="images/framework_table_03.png">
+  <h3>Node web frameworks</h3>
+  <ul>
+    <li>The last demo used a web framework, an add-on which consists of code that simplifies the creation of web
+      applications</li>
+    <li>There are lots of frameworks to choose from: ExpressJS, HapiJS, Koa and KrakenJS to name a few.</li>
+    <li>These frameworks differ in how they're configured, create servers, handle routing and middleware</li>
+  </ul>
   <aside class="notes" data-markdown="">
     ---
+    The last demo shows Node as an API server. To accomplish we made use of a node add-on called a web framework.
+
+    A web framework consist of code which simplifies the creation of web applications. In this regard, there are a
+    number of frameworks available for Node. Which framework you should use depends on your projects needs.
+
+    The most popular are Express.js, Hapi.js and Koa.js, KrakenJS
+
+    These frameworks differ in how they create servers, handle routing and middleware. These are topics we haven't
+    addressed in this presentation but you can learn more about them online.
   </aside>
 </section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Framework popularity --------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Framework popularity</h3>
+  <h4>The following data is from an article entitled<br>"Node.js Framework Comparison: Express vs. Koa vs. Hapi"</h4>
+
+  https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi
+  <aside class="notes" data-markdown="">
+    ---
+    The following data is from an article entitled "Node.js Framework Comparison: Express vs. Koa vs. Hapi"
+    https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- ExpressJS is most popular ---------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>ExpressJS is most popular</h3>
+  <img style="border: 0; padding: 5px;" src="images/framework_table_01.png">
+  <aside class="notes" data-markdown="">
+    ---
+    The data shows that the Express.js framework is by far the most popular based on a number of important metrics.
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Available books -------------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Available books</h3>
+  <img style="border: 0; padding: 5px;" src="images/framework_table_03.png">
+  <aside class="notes" data-markdown="">
+    ---
+    Another important metric is how many books and online tutorials you can find while trying to learn a framework.
+
+    I did a quick search on Google Shopping for books on Express, Koa and Hapi:
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Framework age ---------------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Framework age</h3>
+  <img style="border: 0; padding: 5px;" src="images/framework_table_02.png">
+  <aside class="notes" data-markdown="">
+    ---
+    That said, Express.js is also the oldest Node framework. So it's conceivable that another framework may someday exceed it
+    in popularity among developers.
+
+    For now at least, Express would be a reasonable place to start.
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Building APIs - a closer look ------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Building APIs - a closer look</h3>
+  <img style="border: 0; padding: 5px;" src="images/framework_table_02.png">
+  <aside class="notes" data-markdown="">
+    ---
+    That said, Express.js is also the oldest Node framework. So it's conceivable that another framework may someday exceed it
+    in popularity among developers.
+
+    For now at least, Express would be a reasonable place to start.
+  </aside>
+</section>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Uses of Node ----------------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Uses of Node</h3>
+  <img style="border: 0; padding: 5px; width: 100%" src="images/UsesOfNode-01.png">
+  <aside class="notes" data-markdown="">
+    ---
+    Node is being used to address many types of concerns.
+
+    When people first learn about node they see it as a backend server technology, primarily used to build web facing
+    applications.
+
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Uses of Node - common -------------------------------------------------------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Uses of Node</h3>
+  <img style="border: 0; padding: 5px; width: 100%" src="images/UsesOfNode-02.png">
+  <aside class="notes" data-markdown="">
+    ---
+    Later they learn that Node is also used to power the build tools they use to package their web applications. Tools
+    like Grunt and Gulp.
+
+    Along the way we learn that node can be used to build command line tools. This is quickly becoming an alternative to
+    shell / batch scripting.
+
+    What many developers don't realize is that Node is used to build desktop applications and power Robotics and the
+    Internet of Things.
+
+    You'll find Node in use from tiny devices (see Node on Raspberry Pi) to large scale clusters running on cloud
+    infrastructure.
+
+    For JavaScript developers this is awesome. You get to take your JS and Node experience and apply it to an increasing
+    field of opportunities. The same can't be said for many other options.
+  </aside>
+</section>
+
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<!-- Node and Robotics ------------------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------------------------------------>
+<section data-transition="fade" data-transition-speed="medium">
+  <h3>Node and Robotics</h3>
+  <img style="border: 0; padding: 5px; width: 100%" src="images/U-87-Cyber-Combat-Unit.jpg">
+  Checkout CylonJS and NodeBots!
+  <aside class="notes" data-markdown="">
+    ---
+    Oh, and did I mention you can build robots using Node?
+
+    Checkout CylonJS and NodeBots!
+  </aside>
+</section>
+
+
 
 <!-- ------------------------------------------------------------------------------------------------------------------>
 <!-- Contact ---------------------------------------------------------------------------------------------------------->
