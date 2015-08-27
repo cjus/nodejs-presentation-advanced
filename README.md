@@ -8,6 +8,10 @@ If you're not familiar with RevealJS the following tips might prove helpful. Try
 * Press the `s` key to view presenter notes. This will reveal what was said during the presentation.
 * Press the `b` key to blank the screen. A presenter uses this when he wants to pause the presentation and ensure that the audience isn't distracted by the current slide.
 
+## Presenter Notes
+
+You can also read my [presenter notes](presenter-notes.md)
+
 ## View the presentation
 
 [http://cjus.github.io/nodejs-presentation](http://cjus.github.io/nodejs-presentation-advanced)
