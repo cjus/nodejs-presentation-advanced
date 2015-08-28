@@ -12,7 +12,7 @@ If you missed that talk you can find it here…  http://cjus.github.io/nodejs-pr
 
 Let’s do a quick recap before diving into more advanced Node topics.
 
-So we discussed node as a JavaScript execution engine because node is an application - which contains an embedded JavaScript interpreter for running JavaScript programs. 
+So we discussed node as a JavaScript execution engine because Node is an application - which contains an embedded JavaScript interpreter for running JavaScript programs. 
 
 Node is actually much more, but this simple definition serves as a foundation for learning more about Node.
 
@@ -23,7 +23,7 @@ Here’s a quick demo.  Let’s start Node at the terminal prompt.  We won’t g
 
 $ node
 
-That starts the Node and enters an interactive mode known as a REPL which is an acronym for Read Eval(uate) Print Loop.  We can enter JavaScript in this console and see the results.
+That starts Node and enters an interactive mode known as a REPL which is an acronym for Read Eval(uate) Print Loop.  We can enter JavaScript in this console and see the results.
 
 Tip: Press the TAB key to view a list of internal commands
 
@@ -35,7 +35,7 @@ Node can also be used to build programs that execute on the command line.
 Here’s our example of a command line program which displays system information.
 
 ### Demo 3
-We also saw how Node can be used to serve web pages and even act as an API server as part of a larger web applications.
+We also saw how Node can be used to serve web pages and even act as an API server as part of a larger web application.
 
 Here’s that demo.
 
@@ -50,7 +50,7 @@ We can also see this on the command line as the calls happen.
 We’ll get back to this example a bit later, for now let’s take a slight detour and learn about web frameworks for Node.
 
 ## Node web frameworks
-The last demo shows Node as an API server.  To accomplish we made use of a node package called a web framework.
+The last demo shows Node as an API server.  To accomplish that we made use of a node package called a web framework.
 
 A web framework consist of code which simplifies the creation of web applications. In this regard, there are a number of frameworks available for Node.  Which framework you should use depends on your projects needs.
 
@@ -65,45 +65,46 @@ https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-ha
 
 The data shows that the Express.js framework is by far the most popular based on a number of important metrics.
 
-|    Metric    |    Express.js    |    Koa.js    |    Hapi.js
-| ——————     |    ——————:    | ——:    | ——:
-| Github Stars    |    16,158    |    4,846    |    3,283
-| Contributors    |    163        |    49    |    95
-| Packages that depend on:        |    3,828    |    99    |    102    
-| StackOverflow     Questions    |    11,419    |    72    |    82
+| Metric | Express.js | Koa.js | Hapi.js |
+| ---- | --- | --- | --- |
+| Github Stars | 16,158 | 4,846 | 3,283 |
+| Contributors | 163 | 49 | 95 |
+| Packages that depend on: | 3,828 | 99 | 102 |
+| StackOverflow  Questions    |    11,419    |    72    |    82|
 
 Another important metric is how many books and online tutorials you can find while trying to learn a framework.
 
 I did a quick search on Google Shopping for books on Express, Koa and Hapi:
 
-|Framework    |    Query    |    Hits
-|——————    | :——:    ——:
-| Express.js        |    “express.js” +book    |    dozens
-| Hapi.js    |    “hapi.js” +book    |    1
-| Koa.js        |    “koa.js” +book    |    0
-| Kraken.js        |    “kraken.js” +book    |    0
+| Framework |    Query    |    Hits    |
+|--- | :---: | ---:|
+| Express.js        |    “express.js” +book    |    dozens    |
+| Hapi.js    |    “hapi.js” +book    |    1    |
+| Koa.js        |    “koa.js” +book    |    0    |
+| Kraken.js        |    “kraken.js” +book    |    0    |
 
-That said, Express.js is also the oldest Node framework. So it’s conceivable that another framework may someday exceed it in popularity among developers.
+
+So express appears to be a clear winner. That said, Express is also the oldest Node framework. So it’s conceivable that another framework may someday exceed it in popularity among developers.
 
 For now at least, Express would be a reasonable place to start.
 
-|	Framework    |    First version
-|——————    | ——:
-| Express.js        |    June 2009
-| Hapi.js    |    August 2011
-| Koa.js        |    August 2013
+| Framework | First version |
+| --- | ---:    |
+|     Express.js        |    June 2009 |
+|     Hapi.js    |    August 2011 |
+|     Koa.js        |    August 2013 |
 
 In our earlier talk we looked at the ExpressJS framework for Node.  That’s the framework behind our prior demo.
 
 ## Code review of a Node / Express app
 Let’s revisit our login sample application. We’ll take a closer look at how the application is constructed. Our example uses the Express framework, but keep in mind that what you’ll see is comparable to what you’ll find in other frameworks.
 
-The source for our application can be found this presentation’s repo on GitHub:
+The source for our application can be found on this presentation’s repo on GitHub:
 https://github.com/cjus/nodejs-presentation-advanced
 
 You’ll find the login application in the NodeJSProjects/web/login folder.
 
-Our application’s JavaScript can be found in the project’s root, app.js and in the routes and bin folder.  The node_modules folder is where our package dependencies are stored.  We’ll learn more about node packages shortly.  The views folder contains web templates which are not really used in this project.
+Our application’s JavaScript can be found in the project’s root, app.js and in the routes and bin folder.  The node_modules folder is where our package dependencies are stored.  We’ll learn more about node packages shortly.  The views folder contains web templates which are not  used in this project.
 
 The routes folder contains handlers for the URLs our application handles. More about that shortly.
 
@@ -141,7 +142,7 @@ The last parameter, next, is used to chain request processing - but we won’t g
 ## Client requests
 In public/javascripts/app.js we see our API request which will get sent to api/v1/login.  This uses the $.post jQuery method to send a JSON object to our server.  
 
-Note who the request object has handlers for done and fail. Because our response won’t be handled immediately we have to create callback handler for use when a response arrives.  This pattern is known as promises and it’s something you should be using in your own applications.  In this case we’re using jQuery promises and you can learn more about them online.
+Note how the request object has handlers for done and fail. Because our response won’t be handled immediately we have to create callback handlers for use when a response arrives.  This pattern is known as promises and it’s something you should be using in your own applications.  In this case we’re using jQuery promises and you can learn more about them online.
 
 Another point worth noting is that our request is to ‘api/v1/login’ because the API handling is on the same server as the one where the website is being served from.  You could make requests to other servers by using something like ‘http://someserver.com/api/v1/login'.  This also allows you to have one node server to serve web content and another to process API requests.  This core concept will later lead us to micro services the new web hotness.
 
@@ -157,10 +158,10 @@ In the first presentation we saw how we could add a module, such as express.
 Then we can require the module for use in our app.
 
 ## NPM - The Node Package Manager
-Modules offer a huge boon to developers building Node-based applications. By building modules you’re able to package reusable functionality to share across projects within your company or with the global open source community at large. And better yet you can locate modules which perhaps address your project's specific concerns. 
+Modules offer a huge boon to developers building Node-based applications. By building modules you’re able to package reusable functionality to share across projects within your company or with the global open source community at large. And better yet, you can locate modules which perhaps address your project's specific concerns. 
 
 The Node Package Manager is a tool which ships with Node and assist with the searching, packaging, publishing and updating of node modules.
- 
+
 Because every package module you add to your project becomes a dependency of your project, NPM is often considered a dependency manager, however it's much more.
 
 We saw an npm example when we install ExpressJS:
@@ -197,9 +198,9 @@ Let me step through the process with you.
     $ npm set init.author.email "carlos.justiniano@gmail.com"
     $ npm set init.author.url "http://cjus.me"
     $ npm adduser
-    
+
 The last command wrote my credentials to the ~/.npmrc file, where it will be available to subsequent npm commands.
-           
+
 * Next I created my project on github.
 * Then I update my projects package.json file to include information which NPM publish would need.  Important fields include "name", "contributors", "repository", "keywords" and "license"
 * The npm publish command reads the package.json to determine how to configure and publish your project in the npm repository.
@@ -209,17 +210,17 @@ For complete step by step tutorial see: https://quickleft.com/blog/creating-and-
 
 ## NVM - The Node Version Manager
 Node is updated periodically in response to enhancements and new features. It's a good idea to keep up with updates by trying your programs against newer version of Node.  This can, however, become problematic if you only have one version of node installed on your machine at one time.
- 
+
 To address this issue there is the Node Version Manager, a tool which allows you to install and switch between multiple versions of Node.
- 
+
 Installing a new version of node is as simple as:
- 
+
     $ nvm install 0.12.7
 
 And switching beween version is:
 
     $ nvm use 0.10.25
-    
+
 to find out more about NVM visit: https://github.com/creationix/nvm
 
 
@@ -257,7 +258,7 @@ So why is this effective?  Because a majority of time in web applications is spe
 ## Node Add-ons: Extending Node, using C/C++
 
 Node can be extended using C/C++ native modules.  There are a variety of reasons for wanting to do this, but a common one has to do we getting absolute performance. Another reason is to hook into lower level Node functionality which might not be accessible from JavaScript.  At least one reason to avoid doing this is that addons have to be compiled for each platform they're expected to run on.  So you lose the portability inherit in most JavaScript node applications.
-  
+
 Node itself is written in the C++ programming language. As such, it can be extended using C and/or C++.  Node add-ons are packaged as dynamically loadable modules which is common in the *nix camp and similar to DLLs on the Microsoft Windows platform.  The basic idea is that a module can exists outside of the main program as a component that can be loaded at runtime.  This is an important approach because otherwise you'd have to obtain the NodeJS source code and extend it prior to rebuilding your own custom version.  This is of course a bad idea on so many levels. But hey, this is open source - so you could do that if you really wanted too.
 
 Ok, let’s see an example!
@@ -277,7 +278,7 @@ Next we need to make sure that Node-gyp is installed globally. Node-gyp is a Nod
 ### Building our project
 
 Each Node addon consist of at least three files:
- 
+
 * binding.gyp - binding information for our source files
 * One or more C/C++ files which actually make the code of our addon
 * A package.json file which describes our project and its dependencies
@@ -286,18 +287,18 @@ We use node-gyp to configure our project
 
     $ clear
     $ node-gyp configure
-    
+
 Now we can actually build our project
-    
+
     $ node-gyp build
-    
+
 The output of the last two operations is the creation of a hello.node module in the ~/node-addon/build/Release folder.  This file is actually a Dynamic Shared Object which usally end in a .so extension. Here, node-gyp names our addon with a .node extension because Node looks for such files when a module is required.
 
 We can now use the new node addon in our JS projects:
 
     var addon = require('./build/Release/hello.node');
     console.log(addon.hello());
-            
+
 For more information about this demo checkout: https://github.com/nodejs/node-addon-examples/tree/master/1_hello_world        
 ### Useful links for understanding and building Node add-ons
 
@@ -319,7 +320,7 @@ There a number of reason for doing this:
 * Large applications can scale based on the load of individual services.
 
 Node has emerged as an ideal way of building Micro Services.  Coupled with a framework such as Express and the vastness that is NPM, Node-based microservices can be quickly built and tested.
- 
+
 Good links on Microservices: 
 * https://www.youtube.com/watch?v=2yko4TbC8cI
 * https://www.youtube.com/watch?v=wgdBVIX9ifA
